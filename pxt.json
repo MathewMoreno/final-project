@@ -2,7 +2,9 @@
     "name": "Final Project",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "color-coded-tilemap": "*",
+        "animation": "*"
     },
     "files": [
         "main.blocks",

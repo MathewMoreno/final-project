@@ -217,7 +217,9 @@ f f f f f f f f f f f f f f f f
     Jenga.setPosition(150, 100)
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.game, function (sprite, otherSprite) {
-    Kanye.say("It's Jenga my favorite game I call this Kanye tower", 2000)
+    Kanye.say("It's Jenga my favorite game. I'll call this " + Babys_Name + " tower.", 6000)
+    pause(7000)
+    Kanye.say("Watch out for the trucks!", 3000)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     game.over(false)
@@ -226,6 +228,7 @@ function toycar () {
 	
 }
 let Jenga: Sprite = null
+let Babys_Name = ""
 let toyCar = 0
 let Kanye: Sprite = null
 scene.setTileMap(img`
@@ -309,6 +312,7 @@ if (info.score() == 0) {
 } else {
 	
 }
+Babys_Name = game.askForString("What is your name?")
 Kanye.setPosition(40, 100)
 controller.moveSprite(Kanye, 75, 100)
 game.onUpdate(function () {
